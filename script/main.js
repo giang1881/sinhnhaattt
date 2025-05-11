@@ -198,6 +198,16 @@ const animationTimeline = () => {
             0.2,
             "+=1.5"
         )
+        .to(".slideshow-container", 0.5, {
+            display: "block",
+            onComplete: startSlideshow
+        })
+        .to(".slideshow-container", 0.5, {
+            opacity: 0,
+            onComplete: () => {
+                document.querySelector(".slideshow-container").style.display = "none";
+            }
+        }, "+=36")
         .staggerFromTo(
             ".baloons img",
             1.5, {
@@ -277,5 +287,71 @@ const animationTimeline = () => {
             y: 30,
             zIndex: "-1",
         })
+
+}
+
+function startSlideshow() {
+    const images = [
+        "img/052024.jpg",
+        "img/062024.jpg",
+        "img/072024.jpg",
+        "img/082024.jpg",
+        "img/092024.jpg",
+        "img/102024.jpg",
+        "img/112024.jpg",
+        "img/122024.jpg",
+        "img/012025.jpg",
+        "img/022025.jpg",
+        "img/032025.jpg",
+        "img/042025.jpg"
+    ];
+
+    const captions = [
+        "Chúc mừng sinh nhật 🎂",
+        "Những ngày thật đẹp cùng cậu",
+        "Nụ cười của cậu là ánh nắng",
+        "Luôn đáng yêu như thế này nhé",
+        "Tớ biết ơn vì có cậu",
+        "Chúng ta cùng nhau đi tiếp nhé",
+        "Cảm ơn vì đã luôn ở bên",
+        "Một năm tuyệt vời phía trước",
+        "Cậu là người đặc biệt nhất",
+        "Không ai thay thế được cậu",
+        "Mãi mãi bạn thân 💖",
+        "Hết rồi đó... bất ngờ chưa? 🎉"
+    ];
+
+    let index = 0;
+    // const imgEl = document.getElementById("slideshow");
+
+    // setInterval(() => {
+    //     index = (index + 1) % images.length;
+    //     imgEl.style.opacity = 0;
+
+    //     setTimeout(() => {
+    //         imgEl.src = images[index];
+    //         imgEl.style.opacity = 1;
+    //     }, 500);
+    // }, 3000);
+
+    const imgEl = document.getElementById("slideshow");
+    const captionEl = document.getElementById("caption");
+
+    setInterval(() => {
+        index = (index + 1) % images.length;
+
+        // Làm mờ ảnh và caption trước khi đổi
+        imgEl.style.opacity = 0;
+        captionEl.style.opacity = 0;
+
+        setTimeout(() => {
+            imgEl.src = images[index];
+            captionEl.innerText = captions[index];
+
+            imgEl.style.opacity = 1;
+            captionEl.style.opacity = 1;
+        }, 500);
+    }, 3000);
+
 
 }
