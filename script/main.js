@@ -1,38 +1,52 @@
-// trigger to play music in the background with sweetalert
-window.addEventListener('load', () => {
+// Bắt đầu khi load trang
+window.addEventListener('load', askForGift);
+
+// Bắt đầu khi load trang
+function askForGift() {
     Swal.fire({
-        title: 'Do you want to play music in the background, bbi?',
+        title: 'Cậu có muốn nhận món quà của tớ khônggg',
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes',
-        cancelButtonText: 'No',
+        confirmButtonText: 'Có chứ',
+        cancelButtonText: 'Không này',
     }).then((result) => {
         if (result.isConfirmed) {
-            document.querySelector('.song').play();
             animationTimeline();
         } else {
-            // animationTimeline();
             Swal.fire({
-                title: 'Do you want to play music in the background, bbi?',
-                icon: 'warning',
+                title: 'Are you sure? 😥',
+                text: 'Không nhận quà thật đó hả?',
+                icon: 'question',
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
                 cancelButtonColor: '#d33',
-                confirmButtonText: 'Yes',
-                cancelButtonText: 'No',
+                confirmButtonText: 'Thôi được rồi, nhận quà!',
+                cancelButtonText: 'Không thèm!',
             }).then((result) => {
                 if (result.isConfirmed) {
-                    document.querySelector('.song').play();
                     animationTimeline();
                 } else {
-                    animationTimeline();
+                    Swal.fire({
+                        title: 'Cậu không có lựa chọn đâu 😈',
+                        icon: 'info',
+                        showConfirmButton: false,     // ❌ Không hiển thị nút xác nhận
+                        allowOutsideClick: false,     // ❌ Không cho click ra ngoài
+                        allowEscapeKey: false,        // ❌ Không cho bấm ESC
+                        timer: 1000,                  // ⏱️ Tự động đóng sau 2 giây
+                        didOpen: () => {
+                            // ✅ Sau khi hiện popup, bắt đầu animation
+                            setTimeout(() => {
+                                animationTimeline();
+                            }, 1000); // Đồng bộ với timer
+                        }
+                    });
                 }
             });
         }
     });
-});
+}
 
 
 // animation timeline
@@ -120,7 +134,7 @@ const animationTimeline = () => {
         .to(".fake-btn", 0.1, {
             backgroundColor: "rgb(127, 206, 248)",
         },
-            "+=4")
+            "+=1")
         .to(
             ".four",
             0.5, {
@@ -156,14 +170,6 @@ const animationTimeline = () => {
             "+=1.5"
         )
         .to(
-            ".idea-5 span",
-            0.7, {
-            rotation: 90,
-            x: 8,
-        },
-            "+=1.4"
-        )
-        .to(
             ".idea-5",
             0.7, {
             scale: 0.2,
@@ -194,7 +200,7 @@ const animationTimeline = () => {
         )
         .staggerFromTo(
             ".baloons img",
-            2.5, {
+            1.5, {
             opacity: 0.9,
             y: 1400,
         }, {
@@ -271,18 +277,5 @@ const animationTimeline = () => {
             y: 30,
             zIndex: "-1",
         })
-        .staggerFrom(".nine p", 1, ideaTextTrans, 1.2)
-        .to(
-            ".last-smile",
-            0.5, {
-            rotation: 90,
-        },
-            "+=1"
-        );
 
-    // Restart Animation on click
-    const replyBtn = document.getElementById("replay");
-    replyBtn.addEventListener("click", () => {
-        tl.restart();
-    });
 }

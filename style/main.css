@@ -4,6 +4,11 @@ html {
 
 body {
   font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #ffe6f0, #e0c3fc);
+  background-image: url("../img/background.png"); /* nếu bạn có ảnh nền */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   margin: 0;
 }
 
@@ -83,7 +88,7 @@ body {
 }
 
 .five .idea-5 {
-  font-size: 4rem;
+  font-size: 2.5rem;
 }
 
 .idea-5 span, .idea-6 span, .wish-hbd span {
@@ -137,7 +142,7 @@ body {
   height: 100vh;
   position: fixed;
   top: 0;
-  width: 100vw;
+  width: 50vw;
 }
 
 .eight svg {
@@ -145,7 +150,7 @@ body {
   position: absolute;
   top: 0;
   visibility: hidden;
-  width: 25px;
+  width: 15px;
   z-index: -1;
 }
 
@@ -285,8 +290,4 @@ body {
     font-size: 1.4rem;
   }
 
-  .nine p {
-    font-size: 1.5rem;
-    font-weight: lighter;
-  }
 }
