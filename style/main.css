@@ -124,6 +124,7 @@ body {
 .baloons img {
   display: inline-block;
   position: absolute;
+  transform: scale(0.6);
 }
 
 .baloons img:nth-child(even) {
@@ -294,8 +295,8 @@ body {
 
 .slideshow-container {
   width: 400px;
-  height: 650px;
-  margin: 0px auto;
+  height: 660px;
+  margin: -15px auto;
   text-align: center;
   border-radius: 15px;
   overflow: hidden;

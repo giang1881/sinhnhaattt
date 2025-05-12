@@ -207,7 +207,7 @@ const animationTimeline = () => {
             onComplete: () => {
                 document.querySelector(".slideshow-container").style.display = "none";
             }
-        }, "+=36")
+        }, "+=39")
         .staggerFromTo(
             ".baloons img",
             1.5, {
@@ -303,22 +303,24 @@ function startSlideshow() {
         "img/012025.jpg",
         "img/022025.jpg",
         "img/032025.jpg",
-        "img/042025.jpg"
+        "img/042025.jpg",
+        "img/052025.png"
     ];
 
     const captions = [
-        "Chúc mừng sinh nhật 🎂",
-        "Những ngày thật đẹp cùng cậu",
-        "Nụ cười của cậu là ánh nắng",
-        "Luôn đáng yêu như thế này nhé",
-        "Tớ biết ơn vì có cậu",
-        "Chúng ta cùng nhau đi tiếp nhé",
-        "Cảm ơn vì đã luôn ở bên",
-        "Một năm tuyệt vời phía trước",
-        "Cậu là người đặc biệt nhất",
-        "Không ai thay thế được cậu",
-        "Mãi mãi bạn thân 💖",
-        "Hết rồi đó... bất ngờ chưa? 🎉"
+        "05/2024 - Tim tui hẫng một nhịp luôn á 🎂",
+        "06/2024 - Sắp xa cậu này, vẫn xinh quá trờii ",
+        "07/2024 - Slay chưa, slay chưa, Lan Anh thế chứ!!",
+        "08/2024 - Ý là không nghĩ tớ chụp hình xinh vậy á, chắc là nhờ cậu",
+        "09/2024 - Ờmmm...",
+        "10/2024 - Nụ cười của cậu là ánh nắng",
+        "11/2024 - Hình như bên Anh, đáng yêu chưa nàyy 💕",
+        "12/2024 - Úi, thiên thần có thật trên đờiii",
+        "01/2025 - ''Chúng ta bên nhau, chúng ta tin nhau, chúng ta tích cực công tác''",
+        "02/2025 - Ý là tớ ngắm mãi luôn íii",
+        "03/2025 - oh, đi ăn nhom nhom nàyy",
+        "04/2025 - Em bé nhà ai cưng zayyy 🎉",
+        ""
     ];
 
     let index = 0;
