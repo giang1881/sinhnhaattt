@@ -341,8 +341,8 @@ function startSlideshow() {
 
     setInterval(() => {
         index = (index + 1) % images.length;
-        imgEl.style.transition = "opacity 1s ease-in-out";   // Thêm hiệu ứng mượt
-        captionEl.style.transition = "opacity 1s ease-in-out"; // Thêm hiệu ứng mượt
+        // imgEl.style.transition = "opacity 1s ease-in-out";   // Thêm hiệu ứng mượt
+        // captionEl.style.transition = "opacity 1s ease-in-out"; // Thêm hiệu ứng mượt
         // Làm mờ ảnh và caption trước khi đổi
         imgEl.style.opacity = 0;
         captionEl.style.opacity = 0;
@@ -353,7 +353,7 @@ function startSlideshow() {
 
             imgEl.style.opacity = 1;
             captionEl.style.opacity = 1;
-        }, 500);
+        }, 1000);
     }, 3000);
 
 
