@@ -54,6 +54,8 @@ const animationTimeline = () => {
     // split chars that needs to be animated individually
     const textBoxChars = document.getElementsByClassName("hbd-chatbox")[0];
     const hbd = document.getElementsByClassName("wish-hbd")[0];
+    const audioPlayer = document.getElementById("audioPlayer");
+    audioPlayer.play();
 
     textBoxChars.innerHTML = `<span>${textBoxChars.innerHTML
         .split("")
