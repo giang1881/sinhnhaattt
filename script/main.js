@@ -209,7 +209,7 @@ const animationTimeline = () => {
             onComplete: () => {
                 document.querySelector(".slideshow-container").style.display = "none";
             }
-        }, "+=39")
+        }, "+=52")
         .staggerFromTo(
             ".baloons img",
             1.5, {
@@ -355,8 +355,8 @@ function startSlideshow() {
 
             imgEl.style.opacity = 1;
             captionEl.style.opacity = 1;
-        }, 500);
-    }, 3000);
+        }, 1000);
+    }, 4000);
 
 
 }
