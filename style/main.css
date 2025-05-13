@@ -124,19 +124,19 @@ body {
 .baloons img {
   display: inline-block;
   position: absolute;
-  transform: scale(0.6);
+  transform: scale(0.5);
 }
 
 .baloons img:nth-child(even) {
-  left: -10%;
+  left: -5%;
 }
 
 .baloons img:nth-child(odd) {
-  right: -10%;
+  right: -5%;
 }
 
 .baloons img:nth-child(3n + 0) {
-  left: 30%;
+  left: 15%;
 }
 
 .seven, .eight {
