@@ -355,7 +355,7 @@ function startSlideshow() {
 
             imgEl.style.opacity = 1;
             captionEl.style.opacity = 1;
-        }, 1000);
+        }, 500);
     }, 3000);
 
 
